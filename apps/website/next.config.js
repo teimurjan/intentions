@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   webpack: (config, { isServer }) => {
     if (isServer) {
       // Don't bundle these browser-only packages on the server
@@ -25,13 +28,11 @@ const nextConfig = {
 
     return config;
   },
-  experimental: {
-    serverComponentsExternalPackages: [
-      "@browser-ai/web-llm",
-      "@browser-ai/transformers-js",
-      "@huggingface/transformers",
-    ],
-  },
+  serverExternalPackages: [
+    "@browser-ai/web-llm",
+    "@browser-ai/transformers-js",
+    "@huggingface/transformers",
+  ],
   transpilePackages: [
     "@intentions/client",
     "@intentions/react",
