@@ -3,7 +3,7 @@
  * Loads prompts from the central prompts/ directory at repo root.
  */
 
-import llama3 from "../../../../prompts/llama3-1b.json";
+import llama3 from "../../../../prompts/llama3.2-1b.json";
 import qwen3 from "../../../../prompts/qwen3-0.6b.json";
 
 export interface PromptMeta {

@@ -39,7 +39,7 @@ uv run promptlab benchmark --model llama3.2:1b --tasks explain --num 20
 ```
 prompts/
 ├── qwen3-0.6b.json     # Optimized prompts for Qwen 0.6B
-├── llama3-1b.json      # Optimized prompts for Llama 3.2 1B
+├── llama3.2-1b.json      # Optimized prompts for Llama 3.2 1B
 └── competitors.json    # Benchmark competitor variants
 ```
 
