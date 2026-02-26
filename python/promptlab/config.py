@@ -31,7 +31,7 @@ class OptimizationConfig(BaseModel):
     train_size: int = 50
     val_size: int = 20
     task_lm: str = "openai/gpt-5.1-mini"
-    reflection_lm: str = "openai/gpt-5.1"
+    reflection_lm: str = "openai/gpt-5.2"
 
 
 class DatasetConfig(BaseModel):
@@ -43,12 +43,12 @@ class DatasetConfig(BaseModel):
 class PromptConstraints(BaseModel):
     """Prompt generation constraints for GEPA optimization."""
 
-    min_system_words: int = 8
-    max_system_words: int = 40
+    min_system_words: int = 10
+    max_system_words: int = 35
     min_user_words: int = 2
-    max_user_words: int = 15
-    length_penalty: float = 0.02
-    brevity_penalty: float = 0.03
+    max_user_words: int = 10
+    length_penalty: float = 0.04
+    brevity_penalty: float = 0.01
 
 
 class Config(BaseModel):
@@ -110,7 +110,7 @@ def save_config_template(path: str | Path) -> None:
     template = {
         "llm": {
             "provider": "openai",
-            "model": "gpt-4.1-mini",
+            "model": "gpt-5.1-mini",
             "base_url": None,
         },
         "optimization": {
@@ -118,19 +118,19 @@ def save_config_template(path: str | Path) -> None:
             "seed": 1337,
             "train_size": 50,
             "val_size": 20,
-            "task_lm": "openai/gpt-4.1-mini",
-            "reflection_lm": "openai/gpt-4.1",
+            "task_lm": "openai/gpt-5.1-mini",
+            "reflection_lm": "openai/gpt-5.2",
         },
         "datasets": {
             "cache_dir": ".cache/datasets",
         },
         "prompts": {
-            "min_system_words": 8,
-            "max_system_words": 40,
+            "min_system_words": 10,
+            "max_system_words": 35,
             "min_user_words": 2,
-            "max_user_words": 15,
-            "length_penalty": 0.02,
-            "brevity_penalty": 0.03,
+            "max_user_words": 10,
+            "length_penalty": 0.04,
+            "brevity_penalty": 0.01,
         },
         "output_dir": "promptlab/out",
     }

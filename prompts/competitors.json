@@ -67,23 +67,23 @@
   ],
   "summarize": [
     {
-      "system": "Summarize in 1-2 sentences. Be direct and factual. Capture the main point. Output only the summary.",
+      "system": "Summarize in 1-2 sentences, max 30 words. Start with the main point directly. No preamble or meta-commentary. Output only the summary.",
       "user": "Summarize: {text}"
     },
     {
-      "system": "Extract the main point in under 30 words. No meta-commentary like 'This text discusses'. Output only the summary.",
+      "system": "Extract the key point in under 25 words. Begin with the core message. Never start with 'This text' or 'The author'. Output only the summary.",
       "user": "Summary: {text}"
     },
     {
-      "system": "Write a brief summary. Start with the key point directly. 1-2 sentences max. Output only the summary.",
+      "system": "Write a brief summary, max 30 words. Lead with the main idea. No introductory phrases. Output only the summary.",
       "user": "TL;DR: {text}"
     },
     {
-      "system": "Summarize the core message. Be concise and direct. No preamble. Output only the 1-2 sentence summary.",
+      "system": "Condense to 1-2 sentences. State the main point first. Avoid meta-language like 'discusses' or 'explains'. Output only the summary.",
       "user": "In brief: {text}"
     },
     {
-      "system": "Distill the text to its core meaning. 1-2 sentences maximum. State the main idea directly. Output only the summary.",
+      "system": "Distill to the essential message in under 30 words. Start directly with the key insight. No filler. Output only the summary.",
       "user": "Summarize this: {text}"
     }
   ],

@@ -28,21 +28,6 @@ class PromptTrace:
     metrics: dict[str, float]
 
 
-THINKING_TASKS = {
-    TaskType.REWRITE_FRIENDLY,
-    TaskType.REWRITE_CONCISE,
-    TaskType.SUMMARIZE,
-}
-
-THINKING_MODELS = {"qwen"}
-
-
-def model_supports_thinking(model: str) -> bool:
-    """Check if model supports thinking mode."""
-    model_lower = model.lower()
-    return any(pattern in model_lower for pattern in THINKING_MODELS)
-
-
 class PromptlabAdapter(GEPAAdapter):
     """GEPA adapter for promptlab task evaluation."""
 
@@ -51,7 +36,7 @@ class PromptlabAdapter(GEPAAdapter):
         task_type: TaskType,
         evaluator: BaseEvaluator | None = None,
         client: LLMClient | None = None,
-        model: str = "gpt-4.1-mini",
+        model: str = "gpt-5.1-mini",
         constraints: PromptConstraints | None = None,
         thinking: bool | None = None,
     ):
@@ -60,10 +45,7 @@ class PromptlabAdapter(GEPAAdapter):
         self.client = client or get_client("mock")
         self.model = model
         self.constraints = constraints or PromptConstraints()
-        if thinking is not None:
-            self.thinking = thinking
-        else:
-            self.thinking = task_type in THINKING_TASKS and model_supports_thinking(model)
+        self.thinking = thinking if thinking is not None else False
 
     def evaluate(
         self,

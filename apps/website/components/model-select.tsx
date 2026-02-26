@@ -13,7 +13,7 @@ interface ModelOption {
 }
 
 const models: ModelOption[] = [
-  { key: "qwen", label: "Qwen 0.5B" },
+  { key: "qwen", label: "Qwen 3 0.6B" },
   { key: "llama", label: "Llama 3.2 1B" },
 ];
 

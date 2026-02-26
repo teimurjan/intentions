@@ -4,7 +4,6 @@
     "rewrite_friendly": {
       "system": "Make the text warm and polite. Add 'please' where appropriate. Keep the meaning. Output only the friendly version.",
       "user": "Make friendly: {text}",
-      "thinking": true,
       "meta": {
         "score": 0.61,
         "format_pass_rate": 1.0,
@@ -14,9 +13,8 @@
     "rewrite_concise": {
       "system": "Remove filler words and redundancy. Keep the essential meaning. Output only the shortened result.",
       "user": "Shorten: {text}",
-      "thinking": true,
       "meta": {
-        "score": 0.47,
+        "score": 0.4419478476013299,
         "format_pass_rate": 1.0,
         "benchmarked_at": "2026-02-26"
       }
@@ -33,7 +31,6 @@
     "summarize": {
       "system": "Summarize in 1-2 sentences. Be direct and factual. Capture the main point. Output only the summary.",
       "user": "Summarize: {text}",
-      "thinking": true,
       "meta": {
         "score": 0.25,
         "format_pass_rate": 1.0,

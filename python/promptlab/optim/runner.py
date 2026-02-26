@@ -8,7 +8,7 @@ from promptlab.adapters import get_client
 from promptlab.config import Config
 from promptlab.datasets import load_dataset
 from promptlab.eval import get_evaluator
-from promptlab.optim.adapter import PromptlabAdapter, THINKING_TASKS, model_supports_thinking
+from promptlab.optim.adapter import PromptlabAdapter
 from promptlab.optim.candidates import (
     get_seed_prompt,
     candidate_to_dict,
@@ -35,7 +35,7 @@ Performance examples:
 <inputs_outputs_feedback>
 ```
 
-Write ONLY the improved prompt text (max 20 words).
+Write ONLY the improved prompt text (max 35 words).
 Do NOT write "System:" or "User:" labels.
 If the current text contains {text}, keep {text} in your output.
 
@@ -150,11 +150,10 @@ def optimize_all_tasks(
 
     for task_type in TaskType:
         result = run_optimization(task_type=task_type, config=config, seed=seed)
-        use_thinking = task_type in THINKING_TASKS and model_supports_thinking(config.llm.model)
         prompts[task_type.value] = TaskPrompts(
             system=result.best_candidate.system_prompt,
             user=result.best_candidate.user_prompt,
-            thinking=True if use_thinking else None,
+            thinking=None,
         )
         scores[task_type.value] = TaskScores(
             val_score=result.val_score,

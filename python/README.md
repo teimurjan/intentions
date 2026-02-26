@@ -18,7 +18,7 @@ uv run promptlab init-config
 uv run promptlab optimize --models mock-model --seed 1337
 
 # Run optimization with real models
-uv run promptlab optimize --models gpt-4.1-mini --seed 1337
+uv run promptlab optimize --models gpt-5.2-mini --seed 1337
 ```
 
 ## Tasks
@@ -37,7 +37,7 @@ Optimized prompts are saved to `promptlab/out/<model>.json`:
 
 ```json
 {
-  "model": "gpt-4.1",
+  "model": "gpt-5.2",
   "prompts": {
     "rewrite": {
       "system": "...",
