@@ -1,0 +1,25 @@
+# Promptlab Configuration
+# Copy this file to promptlab.toml and customize
+
+[llm]
+provider = "openai"  # openai, anthropic, ollama, mock
+model = "gpt-4.1-mini"
+# base_url = "https://api.openai.com/v1"  # Optional custom endpoint
+
+[optimization]
+max_metric_calls = 150
+seed = 1337
+train_size = 50
+val_size = 20
+task_lm = "openai/gpt-4.1-mini"
+reflection_lm = "openai/gpt-4.1"
+
+[datasets]
+cache_dir = ".cache/datasets"
+
+[prompts]
+max_system_words = 50
+max_user_words = 20
+length_penalty = 0.02
+
+output_dir = "promptlab/out"

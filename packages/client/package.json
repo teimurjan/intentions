@@ -1,0 +1,63 @@
+{
+	"name": "@intentions/client",
+	"version": "0.1.0",
+	"description": "Headless AI UI client for browser environments",
+	"type": "module",
+	"main": "./dist/index.js",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js"
+		}
+	},
+	"files": [
+		"dist",
+		"src"
+	],
+	"scripts": {
+		"build": "bun run build.ts",
+		"dev": "bun run build.ts --watch",
+		"typecheck": "tsc --noEmit"
+	},
+	"dependencies": {
+		"@intentions/prompt-strategies": "workspace:*",
+		"ai": "^6.0.0"
+	},
+	"peerDependencies": {
+		"@ai-sdk/anthropic": ">=2.0.0",
+		"@ai-sdk/openai": ">=2.0.0",
+		"@browser-ai/web-llm": ">=2.1.4",
+		"@browser-ai/transformers-js": ">=2.1.4"
+	},
+	"peerDependenciesMeta": {
+		"@ai-sdk/anthropic": {
+			"optional": true
+		},
+		"@ai-sdk/openai": {
+			"optional": true
+		},
+		"@browser-ai/web-llm": {
+			"optional": true
+		},
+		"@browser-ai/transformers-js": {
+			"optional": true
+		}
+	},
+	"devDependencies": {
+		"@ai-sdk/anthropic": "^2.0.0",
+		"@ai-sdk/openai": "^2.0.0",
+		"@browser-ai/web-llm": "^2.1.4",
+		"@browser-ai/transformers-js": "^2.1.4",
+		"bun-types": "latest",
+		"typescript": "^5.3.0"
+	},
+	"keywords": [
+		"ai",
+		"llm",
+		"headless-ui",
+		"browser"
+	],
+	"license": "MIT"
+}

@@ -1,0 +1,50 @@
+{
+  "model": "llama3.2:1b",
+  "tasks": {
+    "rewrite_friendly": {
+      "system": "Add 'please' to make polite. Output only the result.",
+      "user": "Make friendly: {text}",
+      "meta": {
+        "score": 0.1301722176564854,
+        "format_pass_rate": 0.9,
+        "benchmarked_at": "2026-02-26"
+      }
+    },
+    "rewrite_concise": {
+      "system": "Remove filler words. Provide concise output containing essential details only.",
+      "user": "Shorten the given text while preserving essential details: {text}",
+      "meta": {
+        "score": 0.38452971901412647,
+        "format_pass_rate": 1.0,
+        "benchmarked_at": "2026-02-26"
+      }
+    },
+    "complete": {
+      "system": "Continue naturally. Output only the continuation.",
+      "user": "{text}",
+      "meta": {
+        "score": 0.5293557802704175,
+        "format_pass_rate": 1.0,
+        "benchmarked_at": "2026-02-26"
+      }
+    },
+    "summarize": {
+      "system": "Summarize the text concisely in a single sentence of 20 words or fewer, while maintaining key details and context.",
+      "user": "Condense this text: {text}",
+      "meta": {
+        "score": 0.23124282919786693,
+        "format_pass_rate": 1.0,
+        "benchmarked_at": "2026-02-26"
+      }
+    },
+    "explain": {
+      "system": "Define the word in 1-2 concise sentences. Avoid examples or preambles.",
+      "user": "Define {text} with a clear, concise explanation as if describing to someone without specialized knowledge.",
+      "meta": {
+        "score": 0.4931997336224397,
+        "format_pass_rate": 1.0,
+        "benchmarked_at": "2026-02-26"
+      }
+    }
+  }
+}

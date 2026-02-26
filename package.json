@@ -1,0 +1,28 @@
+{
+  "name": "@intentions/root",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "workspaces": [
+    "packages/prompt-strategies",
+    "packages/client",
+    "packages/react",
+    "apps/website"
+  ],
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@changesets/changelog-github": "^0.5.2",
+    "@changesets/cli": "^2.29.8"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "scripts": {
+    "build": "bun run build:strategies && bun run build:client && bun run build:react",
+    "build:strategies": "bun run --filter='@intentions/prompt-strategies' build",
+    "build:client": "bun run --filter='@intentions/client' build",
+    "build:react": "bun run --filter='@intentions/react' build",
+    "typecheck": "bun run --filter='@intentions/*' typecheck",
+    "format": "bun run biome check --write"
+  }
+}

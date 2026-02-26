@@ -1,0 +1,28 @@
+{
+	"name": "@intentions/prompt-strategies",
+	"version": "0.1.0",
+	"description": "Pluggable prompt formatting strategies for different LLM families",
+	"type": "module",
+	"main": "./dist/index.js",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"import": "./dist/index.js",
+			"types": "./dist/index.d.ts"
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "bun run build.ts",
+		"dev": "bun run build.ts --watch"
+	},
+	"devDependencies": {
+		"typescript": "^5.0.0"
+	},
+	"peerDependencies": {},
+	"sideEffects": false,
+	"license": "MIT"
+}

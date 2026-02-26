@@ -1,0 +1,38 @@
+{
+	"name": "@intentions/react",
+	"version": "0.1.0",
+	"description": "React bindings for LLM-powered headless UI components",
+	"type": "module",
+	"main": "./dist/index.js",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"import": "./dist/index.js",
+			"types": "./dist/index.d.ts"
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"keywords": [
+		"ai",
+		"react",
+		"headless-ui",
+		"hooks"
+	],
+	"license": "MIT",
+	"peerDependencies": {
+		"react": "^18 || ^19",
+		"@intentions/client": "workspace:*"
+	},
+	"devDependencies": {
+		"@types/react": "^19",
+		"react": "19.2.3",
+		"@intentions/client": "workspace:*"
+	},
+	"scripts": {
+		"typecheck": "tsc --noEmit",
+		"build": "bun run build.ts"
+	}
+}

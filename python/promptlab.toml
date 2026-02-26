@@ -1,0 +1,15 @@
+[llm]
+provider = "ollama"
+model = "qwen3:0.6b"
+
+[optimization]
+max_metric_calls = 100
+seed = 1337
+train_size = 20
+val_size = 10
+# Use "openai/gpt-4o" for best results (requires OPENAI_API_KEY)
+# Use "ollama_chat/qwen3:4b" for local-only (slower, lower quality)
+reflection_lm = "openai/gpt-4o"
+
+[datasets]
+cache_dir = ".cache/datasets"

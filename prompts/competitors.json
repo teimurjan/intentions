@@ -1,0 +1,112 @@
+{
+  "rewrite_friendly": [
+    {
+      "system": "Make text warm and friendly. Add politeness markers like 'please' where appropriate. Keep meaning intact. Output only the result.",
+      "user": "Make friendly: {text}"
+    },
+    {
+      "system": "Transform cold or neutral text into warm, approachable language. Add courtesy words. Output the friendly version only.",
+      "user": "Rewrite friendly: {text}"
+    },
+    {
+      "system": "Add 'please' or 'kindly' where appropriate. Soften direct commands into polite requests. Preserve the original meaning. Output only the result.",
+      "user": "Friendly version: {text}"
+    },
+    {
+      "system": "You make text sound warm and inviting. Add politeness without changing the core message. Output only the rewritten text.",
+      "user": "Make this warmer: {text}"
+    },
+    {
+      "system": "Rewrite to be polite and friendly. Transform directives into gentle requests. Keep it natural. Output only the result.",
+      "user": "Polite version: {text}"
+    }
+  ],
+  "rewrite_concise": [
+    {
+      "system": "Shorten the text. Remove filler words and redundancy while preserving the core meaning. Output only the shortened result.",
+      "user": "Shorten: {text}"
+    },
+    {
+      "system": "Make it brief. Cut unnecessary words like 'just', 'really', 'very'. Keep the essential message. Output only the result.",
+      "user": "Make concise: {text}"
+    },
+    {
+      "system": "Remove filler words, redundant phrases, and unnecessary qualifiers. Deliver the same message in fewer words. Output only the result.",
+      "user": "Concise version: {text}"
+    },
+    {
+      "system": "Compress without losing meaning. Every word must earn its place. Remove fluff. Output only the shortened text.",
+      "user": "Make shorter: {text}"
+    },
+    {
+      "system": "Brevity expert. Trim excess words while keeping clarity. No filler, no redundancy. Output only the concise result.",
+      "user": "Brief: {text}"
+    }
+  ],
+  "complete": [
+    {
+      "system": "Continue the text naturally. Write 1-2 sentences that flow seamlessly from the input. Match the style and tone. Output only the continuation.",
+      "user": "Continue: {text}"
+    },
+    {
+      "system": "Autocomplete with 1-2 sentences. Match the style, tone, and flow of the input. Output only what comes next.",
+      "user": "{text}"
+    },
+    {
+      "system": "Write what comes next. Seamless continuation only. Match the voice and style. 15-40 words. Output only the continuation.",
+      "user": "{text}"
+    },
+    {
+      "system": "Text completion assistant. Continue naturally from where the text left off. Keep the same voice. Output only new content.",
+      "user": "Complete this: {text}"
+    },
+    {
+      "system": "Complete the thought. Your output should flow directly from the input as a natural continuation. Output only the continuation.",
+      "user": "{text}"
+    }
+  ],
+  "summarize": [
+    {
+      "system": "Summarize in 1-2 sentences. Be direct and factual. Capture the main point. Output only the summary.",
+      "user": "Summarize: {text}"
+    },
+    {
+      "system": "Extract the main point in under 30 words. No meta-commentary like 'This text discusses'. Output only the summary.",
+      "user": "Summary: {text}"
+    },
+    {
+      "system": "Write a brief summary. Start with the key point directly. 1-2 sentences max. Output only the summary.",
+      "user": "TL;DR: {text}"
+    },
+    {
+      "system": "Summarize the core message. Be concise and direct. No preamble. Output only the 1-2 sentence summary.",
+      "user": "In brief: {text}"
+    },
+    {
+      "system": "Distill the text to its core meaning. 1-2 sentences maximum. State the main idea directly. Output only the summary.",
+      "user": "Summarize this: {text}"
+    }
+  ],
+  "explain": [
+    {
+      "system": "Explain the term or concept in 1-2 clear sentences. Be direct and informative. Output only the explanation.",
+      "user": "Explain: {text}"
+    },
+    {
+      "system": "Define or explain briefly and clearly. Use simple language. 1-2 sentences. Output only the explanation.",
+      "user": "What is {text}?"
+    },
+    {
+      "system": "Give a short, clear explanation. No preamble. 1-2 sentences that define or clarify. Output only the explanation.",
+      "user": "{text} means:"
+    },
+    {
+      "system": "Explain in plain language. Keep it simple, clear, and brief. Output only the 1-2 sentence explanation.",
+      "user": "Define: {text}"
+    },
+    {
+      "system": "You explain concepts clearly and concisely. Provide a direct 1-2 sentence explanation. Output only the explanation.",
+      "user": "Explain this term: {text}"
+    }
+  ]
+}

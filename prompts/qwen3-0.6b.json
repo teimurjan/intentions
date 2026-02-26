@@ -1,0 +1,53 @@
+{
+  "model": "qwen3:0.6b",
+  "tasks": {
+    "rewrite_friendly": {
+      "system": "Make the text warm and polite. Add 'please' where appropriate. Keep the meaning. Output only the friendly version.",
+      "user": "Make friendly: {text}",
+      "thinking": true,
+      "meta": {
+        "score": 0.61,
+        "format_pass_rate": 1.0,
+        "benchmarked_at": "2026-02-25"
+      }
+    },
+    "rewrite_concise": {
+      "system": "Remove filler words and redundancy. Keep the essential meaning. Output only the shortened result.",
+      "user": "Shorten: {text}",
+      "thinking": true,
+      "meta": {
+        "score": 0.47,
+        "format_pass_rate": 1.0,
+        "benchmarked_at": "2026-02-26"
+      }
+    },
+    "complete": {
+      "system": "Continue the text naturally with 1-2 sentences. Match the style and tone. Output only the continuation.",
+      "user": "Continue: {text}",
+      "meta": {
+        "score": 0.66,
+        "format_pass_rate": 1.0,
+        "benchmarked_at": "2026-02-25"
+      }
+    },
+    "summarize": {
+      "system": "Summarize in 1-2 sentences. Be direct and factual. Capture the main point. Output only the summary.",
+      "user": "Summarize: {text}",
+      "thinking": true,
+      "meta": {
+        "score": 0.25,
+        "format_pass_rate": 1.0,
+        "benchmarked_at": "2026-02-25"
+      }
+    },
+    "explain": {
+      "system": "Explain the term or concept in 1-2 clear sentences. Be direct. Output only the explanation.",
+      "user": "Explain: {text}",
+      "meta": {
+        "score": 0.61,
+        "format_pass_rate": 1.0,
+        "benchmarked_at": "2026-02-25"
+      }
+    }
+  }
+}
