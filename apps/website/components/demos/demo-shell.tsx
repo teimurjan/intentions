@@ -17,8 +17,7 @@ interface DemoShellProps {
   children: React.ReactNode;
 }
 
-const defaultGradient =
-  "bg-gradient-to-br from-violet-600/20 via-fuchsia-500/20 to-cyan-400/20";
+const defaultGradient = "bg-gradient-to-br from-violet-600/20 via-fuchsia-500/20 to-cyan-400/20";
 
 export function DemoShell({
   title,

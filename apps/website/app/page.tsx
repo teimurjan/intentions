@@ -1,9 +1,9 @@
 "use client";
 
 import { Skeleton } from "@heroui/skeleton";
+import { IconBolt, IconBrain, IconLock } from "@tabler/icons-react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
-import { IconBolt, IconBrain, IconLock } from "@tabler/icons-react";
 import { useProviderContext } from "@/contexts/provider-context";
 
 function DemoSkeleton() {

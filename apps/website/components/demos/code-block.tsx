@@ -22,6 +22,7 @@ export function CodeBlock({ code, language = "tsx" }: CodeBlockProps) {
     <div className="relative group">
       <div
         className="p-5 overflow-x-auto text-base [&_pre]:!bg-transparent [&_code]:!bg-transparent"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: There's no risk of XSS here
         dangerouslySetInnerHTML={{ __html: html }}
       />
       <button
